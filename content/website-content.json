@@ -1,0 +1,42 @@
+﻿{
+  "fullName": "Yousef Nejatbakhsh",
+  "professionalTitle": "Data Scientist | Applied AI and Machine Learning Researcher | Assistant Professor",
+  "biography": "Write a brief professional biography of approximately 100 to 150 words.",
+  "education": [
+    "Ph.D. in Applied Mathematics — Institution name",
+    "Additional degree — Institution name"
+  ],
+  "employmentHistory": [
+    "Assistant Professor — Kean University",
+    "Part-Time Lecturer — Rutgers University",
+    "Former Assistant Professor — Caldwell University"
+  ],
+  "researchInterests": [
+    "Applied artificial intelligence",
+    "Machine learning",
+    "Predictive modeling",
+    "Model risk management",
+    "Statistical learning",
+    "Responsible artificial intelligence",
+    "Information theory"
+  ],
+  "selectedPublications": [
+    "Enter selected publication 1",
+    "Enter selected publication 2",
+    "Enter selected publication 3"
+  ],
+  "selectedGitHubProjects": [
+    "FICC Treasury Clearing Liquidity Stress Testing and Model Validation — enter public GitHub repository address",
+    "CCP Margin Model Independent Validation — enter public GitHub repository address",
+    "Student Performance Prediction with Machine Learning — enter public GitHub repository address",
+    "BudgetMem-R — enter public GitHub repository address"
+  ],
+  "teachingExperience": [
+    "Enter course name — Kean University",
+    "Enter course name — Rutgers University",
+    "Enter course name — Caldwell University"
+  ],
+  "linkedInUrl": "Enter your public LinkedIn profile address",
+  "githubUrl": "Enter your public GitHub profile address",
+  "professionalEmail": "Enter your professional email address"
+}

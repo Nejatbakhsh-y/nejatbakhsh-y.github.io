@@ -1,0 +1,9 @@
+﻿Add the current CV to this folder using this exact name:
+
+Yousef_Nejatbakhsh_CV.pdf
+
+Before publishing, verify that the PDF does not include:
+- A home address
+- A personal telephone number
+- Sensitive personal identifiers
+- Confidential information

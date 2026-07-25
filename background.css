@@ -1,0 +1,121 @@
+/*
+==============================================================
+GLOBAL WEBSITE MOUNTAIN BACKGROUND
+Created by P4_Set_Website_Background.ps1
+==============================================================
+*/
+
+:root {
+    --content-background: rgba(255, 255, 255, 0.88);
+    --navigation-background: rgba(255, 255, 255, 0.28);
+    --content-border: rgba(255, 255, 255, 0.55);
+}
+
+html {
+    min-height: 100%;
+    background-color: #45b9e9 !important;
+    background-image:
+        linear-gradient(
+            rgba(218, 244, 255, 0.08),
+            rgba(218, 244, 255, 0.16)
+        ),
+        url("website-background.png") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+body {
+    min-height: 100vh !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+body,
+#root,
+#app,
+.site,
+.site-wrapper,
+.page-wrapper,
+.main-wrapper,
+.content-wrapper,
+main,
+main > section,
+section,
+.page-section,
+.home,
+.home-section,
+.hero,
+.hero-section,
+.about,
+.about-section,
+.experience,
+.experience-section,
+.education,
+.education-section,
+.skills,
+.skills-section,
+.projects,
+.projects-section,
+.research,
+.research-section,
+.publications,
+.publications-section,
+.resume,
+.resume-section,
+.contact,
+.contact-section {
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+header,
+nav,
+.navbar,
+.site-header,
+.navigation,
+.navigation-bar {
+    background-color: var(--navigation-background) !important;
+    background-image: none !important;
+    border-color: var(--content-border) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.card,
+.content-card,
+.profile-card,
+.about-card,
+.experience-card,
+.education-card,
+.skill-card,
+.project-card,
+.research-card,
+.publication-card,
+.contact-card,
+.resume-card,
+.info-card,
+.panel,
+.content-panel {
+    background-color: var(--content-background) !important;
+    border-color: var(--content-border) !important;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+}
+
+footer,
+.site-footer {
+    background-color: rgba(255, 255, 255, 0.35) !important;
+    background-image: none !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+@media (max-width: 900px) {
+    html {
+        background-attachment: scroll !important;
+        background-position: center top !important;
+    }
+}

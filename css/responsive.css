@@ -1,0 +1,468 @@
+/* STEP 5 RESPONSIVE DESIGN */
+
+:root {
+    --responsive-content-width: 1200px;
+    --responsive-gutter: clamp(1rem, 3vw, 2.5rem);
+    --responsive-section-space: clamp(3rem, 7vw, 6rem);
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    line-height: 1.65;
+}
+
+header,
+main,
+footer,
+section,
+nav,
+article,
+aside,
+div {
+    min-width: 0;
+    max-width: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+picture,
+video {
+    height: auto;
+}
+
+p,
+li,
+a,
+button,
+label,
+input,
+textarea {
+    overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.75rem);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+}
+
+.container,
+.wrapper,
+.content,
+.section-container,
+.nav-container,
+.hero-container,
+main > section > div {
+    width: min(
+        calc(100% - (2 * var(--responsive-gutter))),
+        var(--responsive-content-width)
+    );
+    margin-inline: auto;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-block: var(--responsive-section-space);
+}
+
+.hero-content,
+.home-content,
+.about-content,
+.contact-content,
+.profile-content,
+.intro-content {
+    gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.profile-photo,
+.profile-image,
+.hero-photo,
+.hero-image,
+.portrait,
+img[src*="profile"] {
+    width: clamp(190px, 30vw, 350px);
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.projects-grid,
+.project-grid,
+.research-grid,
+.publications-grid,
+.experience-grid,
+.teaching-grid,
+.cards,
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 260px), 1fr)
+    );
+    gap: clamp(1rem, 2.5vw, 2rem);
+    width: 100%;
+}
+
+.actions,
+.buttons,
+.button-group,
+.hero-buttons,
+.cta-group,
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: 100%;
+}
+
+button,
+.button,
+.btn,
+a.button,
+a.btn,
+a[role="button"],
+input[type="button"],
+input[type="submit"] {
+    display: inline-flex;
+    min-height: 44px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.1rem;
+    white-space: normal;
+    text-align: center;
+}
+
+nav {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid currentColor;
+    border-radius: 0.4rem;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.nav-toggle-icon,
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.nav-toggle-icon {
+    position: relative;
+    margin-inline: auto;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+    position: absolute;
+    left: 0;
+    content: "";
+}
+
+.nav-toggle-icon::before {
+    top: -7px;
+}
+
+.nav-toggle-icon::after {
+    top: 7px;
+}
+
+nav.is-open .nav-toggle-icon {
+    background: transparent;
+}
+
+nav.is-open .nav-toggle-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+nav.is-open .nav-toggle-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper,
+.responsive-table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        --responsive-content-width: 960px;
+    }
+}
+
+@media (max-width: 800px) {
+    :root {
+        --responsive-gutter: clamp(1rem, 4vw, 1.75rem);
+        --responsive-section-space: clamp(2.75rem, 8vw, 4.5rem);
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    body.responsive-nav-ready nav ul,
+    body.responsive-nav-ready nav .nav-links,
+    body.responsive-nav-ready nav .nav-menu,
+    body.responsive-nav-ready nav .navigation-links {
+        display: none !important;
+        flex: 0 0 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0.75rem 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+    }
+
+    body.responsive-nav-ready nav.is-open ul,
+    body.responsive-nav-ready nav.is-open .nav-links,
+    body.responsive-nav-ready nav.is-open .nav-menu,
+    body.responsive-nav-ready nav.is-open .navigation-links {
+        display: flex !important;
+    }
+
+    body.responsive-nav-ready nav li {
+        width: 100%;
+        margin: 0;
+    }
+
+    body.responsive-nav-ready nav a {
+        display: block;
+        width: 100%;
+        min-height: 44px;
+        padding: 0.7rem 0.85rem;
+    }
+
+    .hero-content,
+    .home-content,
+    .about-content,
+    .contact-content,
+    .profile-content,
+    .intro-content {
+        grid-template-columns: 1fr !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text,
+    .home-text,
+    .intro-text,
+    .profile-text,
+    .about-text {
+        width: 100%;
+    }
+
+    .actions,
+    .buttons,
+    .button-group,
+    .hero-buttons,
+    .cta-group,
+    .contact-links {
+        justify-content: center;
+    }
+
+    .profile-photo,
+    .profile-image,
+    .hero-photo,
+    .hero-image,
+    .portrait,
+    img[src*="profile"] {
+        width: clamp(180px, 52vw, 310px);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --responsive-gutter: 1rem;
+        --responsive-section-space: 2.75rem;
+    }
+
+    body {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: clamp(1.85rem, 10vw, 2.6rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 8vw, 2.1rem);
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 6vw, 1.55rem);
+    }
+
+    .actions,
+    .buttons,
+    .button-group,
+    .hero-buttons,
+    .cta-group,
+    .contact-links {
+        align-items: stretch;
+    }
+
+    button,
+    .button,
+    .btn,
+    a.button,
+    a.btn,
+    a[role="button"],
+    input[type="button"],
+    input[type="submit"] {
+        width: 100%;
+    }
+
+    .projects-grid,
+    .project-grid,
+    .research-grid,
+    .publications-grid,
+    .experience-grid,
+    .teaching-grid,
+    .cards,
+    .card-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .profile-photo,
+    .profile-image,
+    .hero-photo,
+    .hero-image,
+    .portrait,
+    img[src*="profile"] {
+        width: min(78vw, 280px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* STEP 5 READABILITY SAFEGUARD START */
+
+/*
+   Maintain a minimum rendered text size of 14 pixels.
+   The 1em term preserves larger inherited text sizes.
+*/
+p,
+li,
+a,
+button,
+label,
+input,
+textarea,
+select,
+option,
+summary,
+figcaption,
+small,
+footer,
+footer * {
+    font-size: max(14px, 1em) !important;
+}
+
+/* STEP 5 READABILITY SAFEGUARD END */

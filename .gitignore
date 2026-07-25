@@ -1,0 +1,33 @@
+﻿# Operating-system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# VS Code local settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Logs
+*.log
+
+# Optional local-only content
+private/
+
+# Local website test tooling
+.website-test-tools/
+
+# Local development files
+*.code-workspace
+P*_*.ps1
+
+# Local-only website development files
+_backup/
+.backup/
+backup/
+reports/
+ADD_*_HERE.txt
