@@ -1,4 +1,4 @@
-﻿{
+{
   "fullName": "Yousef Nejatbakhsh",
   "professionalTitle": "Data Scientist | Applied AI and Machine Learning Researcher | Assistant Professor",
   "biography": "Write a brief professional biography of approximately 100 to 150 words.",
@@ -36,7 +36,7 @@
     "Enter course name — Rutgers University",
     "Enter course name — Caldwell University"
   ],
-  "linkedInUrl": "Enter your public LinkedIn profile address",
+  "linkedInUrl": "https://www.linkedin.com/in/yousef-nejatbakhsh-121191128",
   "githubUrl": "Enter your public GitHub profile address",
   "professionalEmail": "Enter your professional email address"
 }
