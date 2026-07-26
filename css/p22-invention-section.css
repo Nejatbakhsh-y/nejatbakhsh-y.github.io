@@ -1,13 +1,49 @@
 /* ==========================================================
-   P22 INVENTION SECTION
+   P22 INVENTION SECTION â€” FINAL MOUNTAIN BACKGROUND
    ========================================================== */
 
 #innovations.invention-section {
     position: relative;
-    min-height: 360px;
+    isolation: isolate;
+    min-height: 430px;
     display: flex;
     align-items: center;
-    padding: clamp(72px, 8vw, 110px) 0;
+    padding: clamp(76px, 8vw, 112px) 0;
+    overflow: hidden;
+
+    /*
+       Use the same website mountain photograph as the other
+       professional sections, with a controlled blue overlay.
+    */
+    background-color: #d7ebf7 !important;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(218, 237, 249, 0.48) 0%,
+            rgba(231, 244, 252, 0.38) 52%,
+            rgba(215, 235, 248, 0.48) 100%
+        ),
+        url("../website-background.png") !important;
+    background-position: center 72% !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: #10283c;
+}
+
+#innovations.invention-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(216, 238, 251, 0.08) 0%,
+            rgba(207, 230, 245, 0.10) 55%,
+            rgba(189, 218, 237, 0.18) 100%
+        );
 }
 
 #innovations .invention-layout {
@@ -23,18 +59,29 @@
     min-width: 0;
 }
 
+#innovations .invention-heading .section-kicker {
+    margin-bottom: 0.9rem;
+    color: #174d73;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
 #innovations .invention-heading h2 {
     margin: 0;
+    color: #0d2235;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.40);
 }
 
 #innovations .invention-copy {
     padding: clamp(1.5rem, 3vw, 2.25rem);
-    border: 1px solid rgba(32, 77, 112, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.76);
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.90);
-    box-shadow: 0 18px 40px rgba(13, 34, 53, 0.16);
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow:
+        0 18px 42px rgba(13, 34, 53, 0.17),
+        inset 0 1px 0 rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 #innovations .invention-copy p {
@@ -44,9 +91,11 @@
     line-height: 1.75;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     #innovations.invention-section {
         min-height: auto;
+        background-position: center 68% !important;
+        background-attachment: scroll !important;
     }
 
     #innovations .invention-layout {
@@ -55,6 +104,18 @@
     }
 }
 
+@media screen and (max-width: 560px) {
+    #innovations.invention-section {
+        padding: 62px 0;
+        background-position: 58% 66% !important;
+    }
+
+    #innovations .invention-copy {
+        padding: 1.35rem;
+        border-radius: 15px;
+    }
+}
+
 /* ==========================================================
-   END P22 INVENTION SECTION
+   END P22 INVENTION SECTION â€” FINAL MOUNTAIN BACKGROUND
    ========================================================== */
