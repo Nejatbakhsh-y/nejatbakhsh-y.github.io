@@ -1638,3 +1638,29 @@ img[src="./assets/images/profile.jpg"] {
 }
 
 /* P18 PROJECTS END */
+
+/* P19 PROJECTS MOUNTAIN BACKGROUND START */
+
+body #projects.projects-section {
+    position: relative;
+    background-color: transparent !important;
+    background-image: url("../section-mountains.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-attachment: scroll !important;
+}
+
+body #projects.projects-section .p18-projects-shell {
+    position: relative;
+    z-index: 1;
+}
+
+/* Preserve readable project cards over the mountain picture. */
+body #projects.projects-section .p18-project-card {
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* P19 PROJECTS MOUNTAIN BACKGROUND END */
