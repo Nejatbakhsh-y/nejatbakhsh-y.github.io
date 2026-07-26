@@ -466,3 +466,71 @@ footer * {
 }
 
 /* STEP 5 READABILITY SAFEGUARD END */
+
+/* P22 NAVIGATION WRAP FIX START */
+
+/*
+   Prevent desktop navigation labels from breaking into separate letters.
+   This scoped block overrides the global responsive readability rules only
+   inside the primary navigation.
+*/
+.navbar .nav-container {
+    width: min(calc(100% - 40px), 1320px);
+}
+
+.navbar .nav-menu {
+    flex: 0 0 auto;
+    flex-wrap: nowrap !important;
+    gap: clamp(0.65rem, 1vw, 1.15rem);
+}
+
+.navbar .nav-menu > li {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: max-content;
+}
+
+.navbar .nav-menu .nav-link {
+    font-size: 14px !important;
+    white-space: nowrap !important;
+    overflow-wrap: normal !important;
+    word-break: normal !important;
+    hyphens: none !important;
+}
+
+/* Compact desktop and laptop navigation before the mobile menu activates. */
+@media screen and (min-width: 901px) and (max-width: 1180px) {
+    .navbar .brand-name {
+        display: none;
+    }
+
+    .navbar .nav-container {
+        gap: 1rem;
+    }
+
+    .navbar .nav-menu {
+        gap: 0.72rem;
+    }
+
+    .navbar .nav-menu .nav-link {
+        font-size: 13px !important;
+    }
+}
+
+/* Preserve the vertical mobile navigation layout. */
+@media screen and (max-width: 900px) {
+    .navbar .nav-menu > li {
+        width: 100% !important;
+        min-width: 0;
+    }
+
+    .navbar .nav-menu .nav-link {
+        width: 100%;
+        font-size: 1rem !important;
+        white-space: normal !important;
+        overflow-wrap: normal !important;
+        word-break: normal !important;
+    }
+}
+
+/* P22 NAVIGATION WRAP FIX END */
