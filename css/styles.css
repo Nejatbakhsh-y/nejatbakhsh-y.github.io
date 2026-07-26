@@ -1,4 +1,4 @@
-﻿:root {
+:root {
     --color-navy-950: #081522;
     --color-navy-900: #0d2235;
     --color-navy-800: #15344e;
@@ -1865,3 +1865,155 @@ img[src="./assets/images/profile.jpg"] {
    P20 PROFESSIONAL EXPERIENCE CARDS — END
    ========================================================== */
 
+/* === P21 CONTACT INFORMATION START === */
+
+#contact .yn-contact-container {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, calc(100% - 40px));
+    margin-inline: auto;
+}
+
+#contact .yn-contact-heading {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+#contact .yn-contact-heading h2 {
+    margin: 4px 0 8px;
+}
+
+#contact .yn-contact-introduction {
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+#contact .yn-contact-panel {
+    padding: clamp(18px, 3vw, 32px);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    border-radius: 24px;
+    background: rgba(245, 250, 255, 0.88);
+    box-shadow:
+        0 18px 45px rgba(15, 40, 70, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.78);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#contact .yn-contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 24px;
+}
+
+#contact .yn-contact-item {
+    display: grid;
+    grid-template-columns: 38px max-content minmax(0, 1fr);
+    align-items: center;
+    gap: 10px;
+    min-height: 64px;
+    padding: 12px 14px;
+    border: 1px solid rgba(25, 90, 155, 0.16);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.72);
+    color: #143d68;
+    text-decoration: none;
+    transition:
+        transform 160ms ease,
+        border-color 160ms ease,
+        background-color 160ms ease,
+        box-shadow 160ms ease;
+}
+
+#contact .yn-contact-item:hover {
+    transform: translateY(-2px);
+    border-color: rgba(18, 91, 165, 0.48);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 9px 20px rgba(15, 63, 108, 0.14);
+}
+
+#contact .yn-contact-item:focus-visible {
+    outline: 3px solid rgba(18, 91, 165, 0.42);
+    outline-offset: 3px;
+}
+
+#contact .yn-contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: #0e5da6;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+#contact .yn-contact-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#contact .yn-contact-text-icon {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: lowercase;
+}
+
+#contact .yn-contact-label {
+    color: #101820;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+#contact .yn-contact-value {
+    min-width: 0;
+    color: #145b9e;
+    font-weight: 520;
+    line-height: 1.45;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 920px) {
+    #contact .yn-contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    #contact .yn-contact-container {
+        width: min(100% - 24px, 1120px);
+    }
+
+    #contact .yn-contact-panel {
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    #contact .yn-contact-item {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 6px 10px;
+        padding: 12px;
+    }
+
+    #contact .yn-contact-label {
+        grid-column: 2;
+    }
+
+    #contact .yn-contact-value {
+        grid-column: 2;
+    }
+}
+
+/* === P21 CONTACT INFORMATION END === */
