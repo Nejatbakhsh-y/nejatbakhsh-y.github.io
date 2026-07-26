@@ -1,7 +1,7 @@
 "use strict";
 
 (() => {
-    const MOBILE_BREAKPOINT = 768;
+    const MOBILE_BREAKPOINT = 1180;
 
     function ready(callback) {
         if (document.readyState === "loading") {

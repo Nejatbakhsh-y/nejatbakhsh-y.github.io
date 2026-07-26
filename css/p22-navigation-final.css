@@ -1,0 +1,197 @@
+/* ==========================================================
+   P22 FINAL HEADER NAVIGATION FIX
+   This file must remain the final stylesheet in index.html.
+   ========================================================== */
+
+.site-header .navbar .nav-container {
+    width: min(calc(100% - 24px), 1600px) !important;
+    max-width: 1600px !important;
+    gap: 1rem !important;
+}
+
+.site-header .navbar .brand {
+    flex: 0 0 auto !important;
+    min-width: max-content !important;
+}
+
+.site-header .navbar .nav-menu {
+    margin-left: auto !important;
+}
+
+.site-header .navbar .nav-menu > li,
+.site-header .navbar .nav-menu > li > .nav-link {
+    overflow-wrap: normal !important;
+    word-break: keep-all !important;
+    hyphens: none !important;
+}
+
+/* Full desktop navigation */
+@media screen and (min-width: 1181px) {
+    .site-header .navbar .nav-toggle,
+    .site-header .navbar .yn-nav-toggle {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .site-header .navbar .nav-menu,
+    .site-header .navbar .yn-nav-menu {
+        position: static !important;
+        inset: auto !important;
+        display: flex !important;
+        flex: 0 0 auto !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
+        margin: 0 0 0 auto !important;
+        padding: 0 !important;
+        gap: clamp(0.48rem, 0.72vw, 1rem) !important;
+        overflow: visible !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        background: transparent !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+
+    .site-header .navbar .nav-menu > li {
+        display: block !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: max-content !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .site-header .navbar .nav-menu > li > .nav-link {
+        display: inline-flex !important;
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: max-content !important;
+        max-width: none !important;
+        padding: 0 !important;
+        font-size: clamp(12px, 0.72vw, 14px) !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        overflow-wrap: normal !important;
+        word-break: keep-all !important;
+    }
+}
+
+/* Hide the long brand name on medium desktop widths. */
+@media screen and (min-width: 1181px) and (max-width: 1480px) {
+    .site-header .navbar .brand-name {
+        display: none !important;
+    }
+
+    .site-header .navbar .nav-container {
+        gap: 0.65rem !important;
+    }
+
+    .site-header .navbar .nav-menu,
+    .site-header .navbar .yn-nav-menu {
+        gap: 0.58rem !important;
+    }
+
+    .site-header .navbar .nav-menu > li > .nav-link {
+        font-size: 12.5px !important;
+    }
+}
+
+/* Hamburger navigation for laptops, tablets, and phones. */
+@media screen and (max-width: 1180px) {
+    .site-header .navbar .nav-container {
+        width: min(calc(100% - 28px), 1120px) !important;
+        justify-content: space-between !important;
+    }
+
+    .site-header .navbar .nav-toggle,
+    .site-header .navbar .yn-nav-toggle {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        flex: 0 0 46px !important;
+        width: 46px !important;
+        min-width: 46px !important;
+        height: 46px !important;
+        margin-left: auto !important;
+        pointer-events: auto !important;
+    }
+
+    .site-header .navbar .nav-menu,
+    .site-header .navbar .yn-nav-menu {
+        position: fixed !important;
+        top: var(--header-height, 76px) !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: auto !important;
+        z-index: 1100 !important;
+        display: none !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+        width: min(88vw, 380px) !important;
+        max-width: 380px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 1.25rem !important;
+        gap: 0 !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        background: rgba(8, 21, 34, 0.99) !important;
+        border-left: 1px solid rgba(255, 255, 255, 0.12) !important;
+        box-shadow: -20px 0 45px rgba(0, 0, 0, 0.28) !important;
+        transform: translateX(105%) !important;
+    }
+
+    .site-header .navbar .nav-menu.is-open,
+    .site-header .navbar .yn-nav-menu.is-open {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateX(0) !important;
+    }
+
+    .site-header .navbar .nav-menu > li {
+        display: block !important;
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+    }
+
+    .site-header .navbar .nav-menu > li > .nav-link {
+        display: flex !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 52px !important;
+        padding: 0.7rem 0.8rem !important;
+        font-size: 15px !important;
+        line-height: 1.35 !important;
+        white-space: nowrap !important;
+        overflow-wrap: normal !important;
+        word-break: keep-all !important;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .site-header .navbar .brand-name {
+        display: none !important;
+    }
+}
+
+/* ==========================================================
+   END P22 FINAL HEADER NAVIGATION FIX
+   ========================================================== */
