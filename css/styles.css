@@ -965,19 +965,19 @@ p:last-child {
 #about.mountain-bg-section {
     background-image:
         linear-gradient(rgba(228, 242, 255, 0.76), rgba(240, 247, 255, 0.78)),
-        url("../section-mountains.png");
+        url("../website-background.png");
 }
 
 #research.mountain-bg-section {
     background-image:
         linear-gradient(rgba(224, 240, 255, 0.80), rgba(237, 246, 255, 0.82)),
-        url("../section-mountains.png");
+        url("../website-background.png");
 }
 
 #projects.mountain-bg-section {
     background-image:
         linear-gradient(rgba(228, 242, 255, 0.76), rgba(240, 247, 255, 0.78)),
-        url("../section-mountains.png");
+        url("../website-background.png");
 }
 
 #about.mountain-bg-section h2,
