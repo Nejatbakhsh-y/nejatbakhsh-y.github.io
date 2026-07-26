@@ -2017,3 +2017,35 @@ img[src="./assets/images/profile.jpg"] {
 }
 
 /* === P21 CONTACT INFORMATION END === */
+
+/* P22-INNOVATIONS-VISIBILITY-BEGIN */
+
+/* Keep Innovations identical in visibility to the other navigation links. */
+header nav a[href="#innovations"],
+.site-header a[href="#innovations"],
+.navbar a[href="#innovations"],
+.nav-menu a[href="#innovations"],
+.nav-links a[href="#innovations"],
+a[href="#innovations"] {
+    color: #d6dde5 !important;
+    -webkit-text-fill-color: #d6dde5 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+header nav a[href="#innovations"]:hover,
+header nav a[href="#innovations"]:focus,
+header nav a[href="#innovations"].active,
+.site-header a[href="#innovations"]:hover,
+.site-header a[href="#innovations"]:focus,
+.site-header a[href="#innovations"].active,
+a[href="#innovations"]:hover,
+a[href="#innovations"]:focus,
+a[href="#innovations"].active {
+    color: #f0c36a !important;
+    -webkit-text-fill-color: #f0c36a !important;
+}
+
+/* P22-INNOVATIONS-VISIBILITY-END */
