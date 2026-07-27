@@ -1,4 +1,4 @@
-:root {
+﻿:root {
     --color-navy-950: #081522;
     --color-navy-900: #0d2235;
     --color-navy-800: #15344e;
@@ -970,12 +970,8 @@ p:last-child {
     background-image:
         linear-gradient(rgba(224, 240, 255, 0.80), rgba(237, 246, 255, 0.82)),
         url("../website-background.png");
-}
-
-#projects.mountain-bg-section {
-    background-image:
-        linear-gradient(rgba(228, 242, 255, 0.76), rgba(240, 247, 255, 0.78)),
-        url("../website-background.png");
+}#projects.mountain-bg-section,
+#innovations.mountain-bg-section{
 }
 
 #about.mountain-bg-section h2,
@@ -994,15 +990,14 @@ p:last-child {
 #research.mountain-bg-section li,
 #projects.mountain-bg-section li {
     color: var(--color-gray-700);
-}
-
-#about.mountain-bg-section .info-card,
+}#about.mountain-bg-section .info-card,
 #research.mountain-bg-section .info-card,
 #projects.mountain-bg-section .info-card,
 #about.mountain-bg-section .project-card,
 #research.mountain-bg-section .project-card,
-#projects.mountain-bg-section .project-card {
-    background: rgba(255, 255, 255, 0.95);
+#projects.mountain-bg-section .project-card,
+#innovations.mountain-bg-section .info-card,
+#innovations.mountain-bg-section .project-card{
     backdrop-filter: blur(2px);
 }
 
@@ -1493,9 +1488,8 @@ img[src="./assets/images/profile.jpg"] {
     gap: 1.5rem;
     width: 100%;
     align-items: stretch;
-}
-
-#projects .p18-project-card {
+}#projects .p18-project-card,
+#innovations .p18-project-card{
     display: flex;
     flex-direction: column;
     min-width: 0;
@@ -1503,7 +1497,6 @@ img[src="./assets/images/profile.jpg"] {
     padding: 1.6rem;
     overflow: hidden;
     color: #142536;
-    background: rgba(255, 255, 255, 0.94);
     border: 1px solid rgba(22, 54, 80, 0.16);
     border-radius: 1rem;
     box-shadow: 0 0.9rem 2rem rgba(18, 50, 75, 0.14);
@@ -1530,12 +1523,10 @@ img[src="./assets/images/profile.jpg"] {
     line-height: 1.35;
     letter-spacing: 0.055em;
     text-transform: uppercase;
-}
-
-#projects .p18-project-status {
+}#projects .p18-project-status,
+#innovations .p18-project-status{
     flex-shrink: 0;
     padding: 0.34rem 0.55rem;
-    background: rgba(36, 79, 112, 0.1);
     border-radius: 999px;
 }
 
@@ -1561,9 +1552,8 @@ img[src="./assets/images/profile.jpg"] {
     gap: 0.45rem;
     margin-top: auto;
     margin-bottom: 1.25rem;
-}
-
-#projects .p18-project-tag {
+}#projects .p18-project-tag,
+#innovations .p18-project-tag{
     display: inline-flex;
     align-items: center;
     max-width: 100%;
@@ -1573,7 +1563,6 @@ img[src="./assets/images/profile.jpg"] {
     font-size: 0.72rem;
     font-weight: 700;
     line-height: 1.25;
-    background: rgba(244, 249, 252, 0.96);
     border: 1px solid rgba(24, 60, 88, 0.17);
     border-radius: 999px;
 }
@@ -1591,9 +1580,8 @@ img[src="./assets/images/profile.jpg"] {
     color: #53697a;
     font-size: 0.76rem;
     line-height: 1.4;
-}
-
-#projects .p18-project-link {
+}#projects .p18-project-link,
+#innovations .p18-project-link{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1605,19 +1593,17 @@ img[src="./assets/images/profile.jpg"] {
     line-height: 1.3;
     text-align: center;
     text-decoration: none;
-    background: #173f5f;
     border: 1px solid #173f5f;
     border-radius: 0.65rem;
 }
 
 #projects .p18-project-link:visited {
     color: #ffffff;
-}
-
-#projects .p18-project-link:hover,
-#projects .p18-project-link:focus-visible {
+}#projects .p18-project-link:hover,
+#projects .p18-project-link:focus-visible,
+#innovations .p18-project-link:hover,
+#innovations .p18-project-link:focus-visible{
     color: #ffffff;
-    background: #0f304a;
     transform: translateY(-2px);
 }
 
@@ -1638,7 +1624,7 @@ img[src="./assets/images/profile.jpg"] {
 /* P18 PROJECTS END */
 
 /* ==========================================================
-   P20 PROFESSIONAL EXPERIENCE CARDS — START
+   P20 PROFESSIONAL EXPERIENCE CARDS â€” START
    ========================================================== */
 
 .career-experience-shell {
@@ -1862,7 +1848,7 @@ img[src="./assets/images/profile.jpg"] {
 }
 
 /* ==========================================================
-   P20 PROFESSIONAL EXPERIENCE CARDS — END
+   P20 PROFESSIONAL EXPERIENCE CARDS â€” END
    ========================================================== */
 
 /* === P21 CONTACT INFORMATION START === */
@@ -2321,3 +2307,52 @@ img[src="./assets/images/profile.jpg"] {
     }
 }
 /* === END AUTOMATED INNOVATIONS SECTION === */
+
+/* === BEGIN AUTOMATED INNOVATIONS EXACT BACKGROUND MATCH === */
+/* Reference section: #projects */
+/* === END AUTOMATED INNOVATIONS EXACT BACKGROUND MATCH === */
+
+
+
+
+/* ================================================================
+   P24: Innovations background synchronized with the other sections
+   ================================================================ */
+html body #innovations {
+    position: relative;
+    isolation: isolate;
+}
+
+html body #innovations > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* P24 INNOVATIONS BACKGROUND START
+   The Innovations section uses the exact background treatment
+   applied to the Professional Experience or nearest reference section.
+*/
+
+
+
+html body #innovations {    background-image: linear-gradient(
+            rgba(255, 255, 255, 0.66),
+            rgba(255, 255, 255, 0.72)
+        ),
+        url("../website-background.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    position: relative;
+    isolation: isolate;
+}
+
+html body #innovations > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* P24 INNOVATIONS BACKGROUND END */
+
